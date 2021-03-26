@@ -1,0 +1,42 @@
+/* div{
+    background-color: mediumaquamarine;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    border: 0.25em solid black;
+} */
+
+header{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    grid-area: header;
+}
+nav{
+    background-color: yellow;
+    grid-area: nav;
+    text-align: center;
+}
+a{
+    margin-right: 20%;
+}
+main{
+    background-color: navy;
+    color: white;
+    grid-area: main;
+}
+aside{
+    background-color: greenyellow;
+    grid-area: aside;
+}
+footer{
+    background-color: green;
+    color: white;
+    grid-area: footer;
+}
+body{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "nav nav nav" "main main aside" "footer footer footer" ;
+}
