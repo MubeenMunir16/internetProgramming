@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>My Chart.js</title>
+</head>
+
+<body>
+    <h1>
+        A Vertical Bar Chart
+    </h1>
+    
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <h1>
+        A Pie Chart
+    </h1>
+    <div class="container">
+        <canvas id="pieChart"></canvas>
+    </div>
+    <h1>
+        Your favourite sports team scores 
+    </h1>
+    <div class="container">
+        <canvas id="lineChart"></canvas>
+    </div>
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+        //global options 
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#777';
+        let massPopChart = new Chart(myChart, {
+            type: 'bar',
+            data: {
+                labels: ['Boston', 'Worchester', 'SpringField', 'Lowel', 'Cambridge', 'New Bedford'],
+                datasets: [{
+                    label: 'Population',
+                    data: [
+                        617000,
+                        181000,
+                        150000,
+                        120000,
+                        100000,
+                        95000
+                    ],
+                    // backgroundColor:'green',
+                    backgroundColor: [
+                        'green',
+                        'blue',
+                        'pink',
+                        'red',
+                        'yellow',
+                        'orange'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Largest Cities in Massachusetts',
+                    fontSize: 25
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    },
+                    layout: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                }
+            }
+        })
+        let myPieChart = document.getElementById('pieChart').getContext('2d');
+        //global options 
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#777';
+        let massPiePopChart = new Chart(myPieChart, {
+            type: 'pie',
+            data: {
+                labels: ['Boston', 'Worchester', 'SpringField', 'Lowel', 'Cambridge', 'New Bedford'],
+                datasets: [{
+                    label: 'Population',
+                    data: [
+                        617000,
+                        181000,
+                        150000,
+                        120000,
+                        100000,
+                        95000
+                    ],
+                    // backgroundColor:'green',
+                    backgroundColor: [
+                        'green',
+                        'blue',
+                        'pink',
+                        'red',
+                        'yellow',
+                        'orange'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Largest Cities in Massachusetts',
+                    fontSize: 25
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    },
+                    layout: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                }
+            }
+        })
+        let myChart2 = document.getElementById('lineChart').getContext('2d');
+        //global options 
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#777';
+        let massLinePopChart = new Chart(myChart2, {
+            type: 'line',
+            data: {
+                labels: ['Lahore Qalander', 'Karachi Kings', 'Multan Sultan', 'Peshawar zalmi', 'Queta Galadiator'],
+                datasets: [{
+                    label: 'Wins',
+                    data: [
+                        6,
+                        1,
+                        2,
+                        4,
+                        2,
+                        3
+                    ],
+                    // backgroundColor:'green',
+                    backgroundColor: 'pink',
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Largest Cities in Massachusetts',
+                    fontSize: 25
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    },
+                    layout: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
